@@ -2,7 +2,8 @@ extends layout
 
 block content
   h1= title 
-  a(href=`http://localhost:3000/new`)= "Send a message"
+  a(href=`http://localhost:${process.env.PORT || 3000}/new`)= "Send a message"
+
 
   main 
     ul 
