@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title 
+  a(href=`http://localhost:3000/new`)= "Send a message"
+
+  main 
+    ul 
+    each message in messages
+      li 
+        p= message.text 
+        p= message.user
+        p= message.added
+
+
