@@ -1,0 +1,14 @@
+extends layout
+
+block content 
+
+    header 
+    h1= "Message Board"
+    p= "Say what you will"
+
+    main
+
+    form(method="POST" action="/new")
+        input(type="text" placeholder="Name" name="user")
+        input(type="text" placeholder="Message" name="text")
+        button(type="submit" id="submit-button")= "Submit"
